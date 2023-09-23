@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">share-alarms</string>
+    <string name="usuario">Ingrese su usuario</string>
+    <string name="ingrese_usuario">Usuario</string>
+    <string name="contrasena">Ingrese su contraseña</string>
+    <string name="ingrese_contrasena">Contraseña</string>
+    <string name="login">Ingresar</string>
+    <string name="Inicio">Inicio</string>
+
+</resources>
