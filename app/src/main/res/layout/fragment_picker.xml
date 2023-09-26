@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PickerFragment">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Añade un espacio en blanco entre las cajas de texto y el divisor -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textDescripcion"
+                android:layout_width="386dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/descripcion"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/white"
+                app:boxStrokeWidth="4dp"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    app:boxBackgroundColor="@color/gray_500"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="4dp"
+                    app:boxCornerRadiusBottomStart="4dp"
+                    app:boxCornerRadiusTopEnd="4dp"
+                    app:boxCornerRadiusTopStart="4dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Añade otro espacio en blanco entre las cajas de texto y el divisor -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textDate"
+                android:layout_width="386dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/fecha"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/white"
+                app:boxStrokeWidth="4dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@android:color/white"
+                    app:boxBackgroundColor="@color/gray_500"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="4dp"
+                    app:boxCornerRadiusBottomStart="4dp"
+                    app:boxCornerRadiusTopEnd="4dp"
+                    app:boxCornerRadiusTopStart="4dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- Agrego esto dentro del ConstraintLayout, debajo de las cajas de texto existentes -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/timeContainer"
+                android:layout_width="386dp"
+                android:layout_height="113dp"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/gray_500"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="14dp">
+
+                <!-- Texto "Ingrese la hora" -->
+                <TextView
+                    android:id="@+id/textEnterTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/textHour"
+                    android:layout_alignTop="@id/textHour"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="8dp"
+                    android:text="Ingrese la hora"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/timeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="123dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/textDate">
+
+                    <!-- Cuadro de texto para la hora (HH) -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textHour"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@color/white"
+                        app:boxBackgroundColor="@color/gray_700"
+                        app:boxBackgroundMode="outline"
+                        app:boxCornerRadiusBottomEnd="4dp"
+                        app:boxCornerRadiusBottomStart="4dp"
+                        app:boxCornerRadiusTopEnd="4dp"
+                        app:boxCornerRadiusTopStart="4dp"
+                        app:boxStrokeColor="@android:color/white"
+                        app:boxStrokeWidth="4dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="11|"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/white" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Dos puntos (:) -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp" />
+
+                    <!-- Cuadro de texto para los minutos (MM) -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textMinute"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@color/white"
+                        app:boxBackgroundColor="@color/gray_500"
+                        app:boxCornerRadiusBottomEnd="4dp"
+                        app:boxCornerRadiusBottomStart="4dp"
+                        app:boxCornerRadiusTopEnd="4dp"
+                        app:boxCornerRadiusTopStart="4dp"
+                        app:boxStrokeColor="@android:color/white"
+                        app:boxStrokeWidth="4dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="35"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/white" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Toggle AM/PM -->
+                    <ToggleButton
+                        android:id="@+id/toggleAM"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/toggle_background"
+                        android:checked="false"
+                        android:textColor="@android:color/white"
+                        android:textOff="AM"
+                        android:textOn="AM"
+                        android:textSize="18sp" />
+
+                    <ToggleButton
+                        android:id="@+id/togglePM"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/toggle_background"
+                        android:checked="true"
+                        android:textColor="@android:color/white"
+                        android:textOff="PM"
+                        android:textOn="PM"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+
+            <CheckBox
+                android:layout_width="379dp"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/check_label"
+                android:textColor="@android:color/white" />
+
+            <LinearLayout
+                android:id="@+id/dayLayout"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/_lunes_button"
+                    android:layout_width="0dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/lunes"
+                    app:backgroundTint="@color/gray_700"
+                    app:maxImageSize="65dp"
+                    app:shapeAppearanceOverlay="@style/RoundCornerShape"
+                    app:tint="?attr/colorOnPrimary" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/_martes_button"
+                    android:layout_width="0dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/martes"
+                    app:backgroundTint="?attr/colorPrimary"
+                    app:maxImageSize="65dp"
+                    app:shapeAppearanceOverlay="@style/RoundCornerShape"
+                    app:tint="?attr/colorOnPrimary" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/_miercoles_button"
+                    android:layout_width="0dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/miercoles"
+                    app:backgroundTint="@color/gray_700"
+                    app:maxImageSize="65dp"
+                    app:shapeAppearanceOverlay="@style/RoundCornerShape"
+                    app:tint="?attr/colorOnPrimary" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/_jueves_button"
+                    android:layout_width="0dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/jueves"
+                    app:backgroundTint="?attr/colorPrimary"
+                    app:maxImageSize="65dp"
+                    app:shapeAppearanceOverlay="@style/RoundCornerShape"
+                    app:tint="?attr/colorOnPrimary" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/_viernes_button"
+                    android:layout_width="0dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/viernes"
+                    app:backgroundTint="?attr/colorPrimary"
+                    app:maxImageSize="65dp"
+                    app:shapeAppearanceOverlay="@style/RoundCornerShape"
+                    app:tint="?attr/colorOnPrimary" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/_sabado_button"
+                    android:layout_width="0dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/sabado"
+                    app:backgroundTint="@color/gray_700"
+                    app:maxImageSize="65dp"
+                    app:shapeAppearanceOverlay="@style/RoundCornerShape"
+                    app:tint="?attr/colorOnPrimary" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/_domingo_button"
+                    android:layout_width="0dp"
+                    android:layout_height="49dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/domingo"
+                    app:backgroundTint="@color/gray_700"
+                    app:maxImageSize="65dp"
+                    app:shapeAppearanceOverlay="@style/RoundCornerShape"
+                    app:tint="?attr/colorOnPrimary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activacionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="250dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:boxStrokeWidth="4dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/dropdown_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="Metodo de activacion"
+                        android:inputType="none"
+                        android:textColorHint="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/_microfono_button"
+                    android:layout_width="0dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/microfono"
+                    app:backgroundTint="@color/gray_500"
+                    app:maxImageSize="65dp"
+                    app:shapeAppearanceOverlay="@style/RoundCornerShape"
+                    app:srcCompat="@drawable/keyboard_voice_24px"
+                    app:tint="?attr/colorOnPrimary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/crearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="right|center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cancelar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end"
+
+                    android:layout_marginEnd="16dp"
+
+                    android:onClick="onLoginButtonClick"
+                    android:text="@string/cancelar"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/black"
+                    app:shapeAppearance="@style/RoundedButton" />
+
+                <Button
+                    android:id="@+id/crear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end"
+
+                    android:layout_marginEnd="16dp"
+
+                    android:onClick="onLoginButtonClick"
+                    android:text="@string/crear"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/teal_100"
+                    app:shapeAppearance="@style/RoundedButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Agrega otros componentes debajo de las cajas de texto aquí -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

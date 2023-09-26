@@ -3,7 +3,28 @@
 <resources>
     <style name="RoundedButton">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">12dp</item> <!-- Ajusta el radio para controlar el grado de redondeo -->
+        <item name="cornerSize">20dp</item> <!-- Ajusta el radio para controlar el grado de redondeo -->
     </style>
+    <style name="RoundCornerShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item> <!-- Ajusta este valor según el grado de redondez que desees -->
+    </style>
+    <style name="WhiteText">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="WhiteText2">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item> <!-- Tamaño de texto más pequeño (puedes ajustar el valor según tus preferencias) -->
+    </style>
+    <!-- Estilo para el hint cuando está seleccionado -->
+    <style name="HintStyle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- Estilo para el borde cuando no está seleccionado -->
+    <style name="OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/white</item> <!-- Cambia el color del borde a blanco -->
+    </style>
+
+
 
 </resources>

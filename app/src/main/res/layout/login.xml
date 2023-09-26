@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/Superior"
         android:layout_width="413dp"
         android:layout_height="419dp"
         android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="Inferior"
+        app:layout_constraintBottom_toTopOf="@+id/Inferior"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,11 +68,13 @@
                 app:boxCornerRadiusTopStart="4dp"
                 app:boxStrokeColor="@color/white"
                 app:boxStrokeWidth="4dp"
+                android:textColor="@android:color/white"
                 app:endIconMode="clear_text">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="213dp"
                     android:layout_height="match_parent"
+                    android:height="48dp"
                     android:outlineProvider="none" />
 
 
@@ -92,7 +94,8 @@
                 android:layout_marginStart="36dp"
                 android:layout_weight="1"
                 android:text="@string/ingrese_contrasena"
-                android:textColor="@android:color/white" />
+                app:endIconTint="@color/white"
+                android:textColor="@color/white" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/contrasena"
@@ -109,11 +112,12 @@
                 app:boxStrokeColor="@color/white"
                 app:boxStrokeWidth="4dp"
                 app:endIconMode="password_toggle"
-                app:endIconTint="@color/white">
+                android:textColor="@color/white" >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="212dp"
                     android:layout_height="match_parent"
+                    android:height="48dp"
                     android:inputType="textPassword" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -130,7 +134,8 @@
             android:text="@string/login"
             android:textColor="@color/black"
             app:backgroundTint="@color/teal_100"
-            app:shapeAppearance="@style/RoundedButton" />
+            app:shapeAppearance="@style/RoundedButton"
+            android:onClick="onLoginButtonClick"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
