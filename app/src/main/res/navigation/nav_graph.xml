@@ -9,7 +9,11 @@
         android:id="@+id/listadoFragment"
         android:name="com.example.share_alarms.ListadoFragment"
         android:label="Listado"
-        tools:layout="@layout/fragment_listado" />
+        tools:layout="@layout/fragment_listado" >
+        <action
+            android:id="@+id/action_listadoFragment_to_crearFragment"
+            app:destination="@id/crearFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/crearFragment"

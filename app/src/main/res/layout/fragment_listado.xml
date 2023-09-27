@@ -7,8 +7,6 @@
     android:id="@+id/fragment_listado"
     tools:context=".ListadoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -55,22 +53,22 @@
             android:layout_height="match_parent"
             android:layout_below="@id/tabLayout"/>
 
+
     </LinearLayout>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/fab_content_desc"
+        app:backgroundTint="?attr/colorPrimary"
+        app:maxImageSize="65dp"
+        app:shapeAppearanceOverlay="@style/RoundCornerShape"
+        app:srcCompat="@drawable/add_circle_24px"
+        app:tint="@color/gray_500" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/_action_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="16dp"
-            android:contentDescription="@string/fab_content_desc"
-            app:backgroundTint="?attr/colorPrimary"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:maxImageSize="65dp"
-            app:shapeAppearanceOverlay="@style/RoundCornerShape"
-            app:srcCompat="@drawable/add_circle_24px"
-            app:tint="?attr/colorOnPrimary" />
+
 
 </FrameLayout>

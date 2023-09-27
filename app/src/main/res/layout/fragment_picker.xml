@@ -13,12 +13,14 @@
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:gravity="center|bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:orientation="vertical">
 
             <!-- Añade un espacio en blanco entre las cajas de texto y el divisor -->
@@ -228,6 +230,7 @@
                     android:layout_marginEnd="4dp"
                     android:layout_weight="1"
                     android:contentDescription="@string/lunes"
+                    app:srcCompat="@drawable/l"
                     app:backgroundTint="@color/gray_700"
                     app:maxImageSize="65dp"
                     app:shapeAppearanceOverlay="@style/RoundCornerShape"
@@ -240,6 +243,7 @@
                     android:layout_marginEnd="4dp"
                     android:layout_weight="1"
                     android:contentDescription="@string/martes"
+                    app:srcCompat="@drawable/m"
                     app:backgroundTint="?attr/colorPrimary"
                     app:maxImageSize="65dp"
                     app:shapeAppearanceOverlay="@style/RoundCornerShape"
@@ -252,6 +256,7 @@
                     android:layout_marginEnd="4dp"
                     android:layout_weight="1"
                     android:contentDescription="@string/miercoles"
+                    app:srcCompat="@drawable/m"
                     app:backgroundTint="@color/gray_700"
                     app:maxImageSize="65dp"
                     app:shapeAppearanceOverlay="@style/RoundCornerShape"
@@ -264,6 +269,7 @@
                     android:layout_marginEnd="4dp"
                     android:layout_weight="1"
                     android:contentDescription="@string/jueves"
+                    app:srcCompat="@drawable/j"
                     app:backgroundTint="?attr/colorPrimary"
                     app:maxImageSize="65dp"
                     app:shapeAppearanceOverlay="@style/RoundCornerShape"
@@ -276,6 +282,7 @@
                     android:layout_marginEnd="4dp"
                     android:layout_weight="1"
                     android:contentDescription="@string/viernes"
+                    app:srcCompat="@drawable/v"
                     app:backgroundTint="?attr/colorPrimary"
                     app:maxImageSize="65dp"
                     app:shapeAppearanceOverlay="@style/RoundCornerShape"
@@ -288,6 +295,7 @@
                     android:layout_marginEnd="4dp"
                     android:layout_weight="1"
                     android:contentDescription="@string/sabado"
+                    app:srcCompat="@drawable/s"
                     app:backgroundTint="@color/gray_700"
                     app:maxImageSize="65dp"
                     app:shapeAppearanceOverlay="@style/RoundCornerShape"
@@ -299,6 +307,7 @@
                     android:layout_height="49dp"
                     android:layout_weight="1"
                     android:contentDescription="@string/domingo"
+                    app:srcCompat="@drawable/d"
                     app:backgroundTint="@color/gray_700"
                     app:maxImageSize="65dp"
                     app:shapeAppearanceOverlay="@style/RoundCornerShape"
@@ -360,10 +369,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_gravity="end"
-
                     android:layout_marginEnd="16dp"
 
-                    android:onClick="onLoginButtonClick"
                     android:text="@string/cancelar"
                     android:textColor="@color/white"
                     app:backgroundTint="@color/black"
@@ -374,18 +381,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_gravity="end"
-
                     android:layout_marginEnd="16dp"
 
-                    android:onClick="onLoginButtonClick"
                     android:text="@string/crear"
                     android:textColor="@color/black"
                     app:backgroundTint="@color/teal_100"
                     app:shapeAppearance="@style/RoundedButton" />
             </LinearLayout>
+
         </LinearLayout>
+
     </FrameLayout>
 
-    <!-- Agrega otros componentes debajo de las cajas de texto aquí -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
