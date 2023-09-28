@@ -1,5 +1,6 @@
 package com.example.share_alarms
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -34,13 +35,17 @@ class PickerFragment : Fragment() {
 
         // Configurar el clic del botón "Cancelar" para navegar de vuelta a fragment_listado
         cancelButton.setOnClickListener {
-            findNavController().navigate(R.id.nav_host_fragment)
+            val intent = Intent(requireContext(), HomeActivity::class.java)
+            startActivity(intent)
 
         }
 
         // Configurar el clic del botón "Crear" para mostrar un mensaje Toast
         crearButton.setOnClickListener {
             Toast.makeText(requireContext(), "La alarma fue creada con éxito", Toast.LENGTH_SHORT).show()
+            val intent = Intent(requireContext(), HomeActivity::class.java)
+            startActivity(intent)
+
         }
 
         return view

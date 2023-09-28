@@ -1,5 +1,6 @@
 package com.example.share_alarms
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -38,11 +39,15 @@ class ContactoFragment : Fragment() {
 
         // Configurar el clic del botón "Cancelar" para navegar de vuelta a fragment_listado
         cancelContactoButton.setOnClickListener {
-            findNavController().navigate(R.id.nav_host_fragment)
+            val intent = Intent(requireContext(), HomeActivity::class.java)
+            startActivity(intent)
+
         }
         // Configurar el clic del botón "Asignar" para mostrar un mensaje Toast
         asignarButton.setOnClickListener {
-            Toast.makeText(requireContext(), "El(los) contacto(s) fueron asignados con exito", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "El contacto fue asignado con Exito!!", Toast.LENGTH_SHORT).show()
+            val intent = Intent(requireContext(), HomeActivity::class.java)
+            startActivity(intent)
         }
         // Inflate the layout for this fragment
         return view

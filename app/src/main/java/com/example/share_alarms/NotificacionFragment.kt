@@ -1,5 +1,6 @@
 package com.example.share_alarms
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -38,13 +39,14 @@ class NotificacionFragment : Fragment() {
 
         // Configurar el clic del botón "Cancelar" para navegar de vuelta a fragment_listado
         cancelNotificacionButton.setOnClickListener {
-            findNavController().navigate(R.id.nav_host_fragment)
+            val intent = Intent(requireContext(), HomeActivity::class.java)
+            startActivity(intent)
 
         }
         // Configurar el clic del botón "Eliminar"
         eliminarButton.setOnClickListener {
             val data = arrayListOf(
-                NotificationData(""),
+                NotificationData("Notificaciones Eliminadas!!!!"),
                 NotificationData(""),
                 NotificationData(""),
                 NotificationData("")
