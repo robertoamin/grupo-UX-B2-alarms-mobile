@@ -1,0 +1,52 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- Icono a la izquierda -->
+    <ImageView
+        android:id="@+id/iconImageView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/alarm_24px"
+        android:foregroundTint="@color/black"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
+
+    <!-- Texto al lado del icono -->
+
+    <!-- Switch toggle al lado derecho -->
+    <TextView
+        android:id="@+id/textBelowTextView"
+        style="@style/WhiteText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTextView"
+        android:layout_alignStart="@id/iconImageView"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/iconImageView"
+        android:text="Lunes, Martes, Sabado" />
+
+    <TextView
+        android:id="@+id/textTextView"
+        style="@style/WhiteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/iconImageView"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/iconImageView"
+        android:text="Texto de ejemplo de la sirenita" />
+
+    <Switch
+        android:id="@+id/switchToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>
