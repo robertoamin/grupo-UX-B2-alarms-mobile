@@ -67,7 +67,7 @@
             app:backgroundTint="?attr/colorPrimary"
             app:maxImageSize="65dp"
             app:shapeAppearanceOverlay="@style/RoundCornerShape"
-            app:srcCompat="@drawable/add_circle_24px"
+            app:srcCompat="@drawable/add_24px"
             app:tint="@color/gray_500" />
 
 </FrameLayout>

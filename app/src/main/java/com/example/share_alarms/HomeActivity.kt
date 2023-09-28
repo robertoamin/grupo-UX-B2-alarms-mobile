@@ -33,8 +33,7 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_notifications -> {
-                    Toast.makeText(this, "Accion seleccionada: ${item.title}", Toast.LENGTH_SHORT)
-                        .show()
+                    loadFragment(NotificacionFragment())
                     true
                 }
                 else -> false

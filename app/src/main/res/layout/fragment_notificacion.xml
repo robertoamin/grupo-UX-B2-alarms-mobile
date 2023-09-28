@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_500"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iconImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:foregroundTint="@color/black"
+            android:src="@drawable/note_24px" />
+
+        <ListView
+            android:id="@+id/notificationListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/crearContactoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="170dp"
+            android:gravity="right|bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancelarNotificaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:text="@string/cancelar"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/black"
+                app:shapeAppearance="@style/RoundedButton" />
+
+            <Button
+                android:id="@+id/borrarNotificaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:text="@string/asignar"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/teal_100"
+                app:shapeAppearance="@style/RoundedButton" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>
