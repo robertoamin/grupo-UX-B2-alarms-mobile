@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/dayLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Icono a la izquierda -->
+        <ImageView
+            android:id="@+id/iconAvatarView"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:foregroundTint="@color/white"
+            android:src="@drawable/person_24px" />
+
+        <!-- Texto al lado del icono -->
+
+
+        <TextView
+            android:id="@+id/contactTextTestView"
+            style="@style/WhiteText"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:text="Texto de ejemplo de la sirenita" />
+
+        <CheckBox
+            android:id="@+id/contactCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:buttonTint="@color/teal_100"
+            android:checked="true" />
+
+    </LinearLayout>
+
+</RelativeLayout>
