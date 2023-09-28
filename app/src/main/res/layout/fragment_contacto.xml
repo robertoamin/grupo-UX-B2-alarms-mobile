@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_500"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/text_label_4"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/timeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iconImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:foregroundTint="@color/black"
+                android:src="@drawable/alarm_24px" />
+
+            <TextView
+                android:id="@+id/timeText"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:gravity="center"
+                android:text="@string/eventoAlarma"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dayLayout"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/_lunes_button"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/lunes"
+                app:backgroundTint="@color/gray_700"
+                app:maxImageSize="65dp"
+                app:shapeAppearanceOverlay="@style/RoundCornerShape"
+                app:srcCompat="@drawable/l"
+                app:tint="?attr/colorOnPrimary" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/_martes_button"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/martes"
+                app:backgroundTint="?attr/colorPrimary"
+                app:maxImageSize="65dp"
+                app:shapeAppearanceOverlay="@style/RoundCornerShape"
+                app:srcCompat="@drawable/m"
+                app:tint="?attr/colorOnPrimary" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/_miercoles_button"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/miercoles"
+                app:backgroundTint="@color/gray_700"
+                app:maxImageSize="65dp"
+                app:shapeAppearanceOverlay="@style/RoundCornerShape"
+                app:srcCompat="@drawable/m"
+                app:tint="?attr/colorOnPrimary" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/_jueves_button"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/jueves"
+                app:backgroundTint="?attr/colorPrimary"
+                app:maxImageSize="65dp"
+                app:shapeAppearanceOverlay="@style/RoundCornerShape"
+                app:srcCompat="@drawable/j"
+                app:tint="?attr/colorOnPrimary" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/_viernes_button"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/viernes"
+                app:backgroundTint="?attr/colorPrimary"
+                app:maxImageSize="65dp"
+                app:shapeAppearanceOverlay="@style/RoundCornerShape"
+                app:srcCompat="@drawable/v"
+                app:tint="?attr/colorOnPrimary" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/_sabado_button"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/sabado"
+                app:backgroundTint="@color/gray_700"
+                app:maxImageSize="65dp"
+                app:shapeAppearanceOverlay="@style/RoundCornerShape"
+                app:srcCompat="@drawable/s"
+                app:tint="?attr/colorOnPrimary" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/_domingo_button"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/domingo"
+                app:backgroundTint="@color/gray_700"
+                app:maxImageSize="65dp"
+                app:shapeAppearanceOverlay="@style/RoundCornerShape"
+                app:srcCompat="@drawable/d"
+                app:tint="?attr/colorOnPrimary" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/contactsText"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/contactos_disponibles"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <ListView
+            android:id="@+id/contactListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/crearContactoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="right|center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancelarContacto"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+
+                android:text="@string/cancelar"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/black"
+                app:shapeAppearance="@style/RoundedButton" />
+
+            <Button
+                android:id="@+id/asignarContacto"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+
+                android:text="@string/asignar"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/teal_100"
+                app:shapeAppearance="@style/RoundedButton" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

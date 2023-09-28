@@ -1,10 +1,40 @@
 <resources>
-    <string name="app_name">share-alarms</string>
+    <string name="app_name">Share-Alarms</string>
     <string name="usuario">Ingrese su usuario</string>
     <string name="ingrese_usuario">Usuario</string>
     <string name="contrasena">Ingrese su contraseña</string>
     <string name="ingrese_contrasena">Contraseña</string>
     <string name="login">Ingresar</string>
     <string name="Inicio">Inicio</string>
+    <string name="title_home">Inicio</string>
+    <string name="title_contactos">Contactos</string>
+    <string name="title_notificaciones">Notificaciones</string>
+    <string name="fab_content_desc">agregar</string>
+    <string name="descripcion">Nombre del evento</string>
+    <string name="fecha">dd/mm/yyyy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="check_label">Recurrente</string>
+    <string name="text_label_1">Sabado</string>
+    <string name="text_label_2">Domingo</string>
+    <string name="text_label_3">Lunes</string>
+    <string name="text_label_4">Sabado, Sept 30</string>
+    <string name="seleccionar_hora">Seleccionar hora</string>
+    <string name="lunes">Lunes</string>
+    <string name="martes">Martes</string>
+    <string name="miercoles">Miercoles</string>
+    <string name="jueves">Jueves</string>
+    <string name="viernes">Viernes</string>
+    <string name="sabado">Sabado</string>
+    <string name="domingo">Domingo</string>
+    <string name="microfono">Microfono</string>
+    <string name="crear">Crear</string>
+    <string name="cancelar">Cancelar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Andres String's -->
+    <string name="eventoAlarma">7:00 AM Colegio niños</string>
+    <string name="contactos_disponibles">Contactos disponibles</string>
+    <string name="asignar">Asignar</string>
+    <string name="borrar">Eliminar</string>
 
 </resources>

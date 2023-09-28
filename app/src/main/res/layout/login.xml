@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    android:id="@+id/fragment_login"
+    tools:context=".LoginActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/Superior"
-        android:layout_width="413dp"
-        android:layout_height="419dp"
+        android:layout_width="414dp"
+        android:layout_height="495dp"
         android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="Inferior"
+        app:layout_constraintBottom_toTopOf="@+id/Inferior"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,6 +60,7 @@
                 android:layout_width="229dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/usuario"
+                android:textColor="@android:color/white"
                 android:textColorHint="@color/white"
                 app:boxBackgroundColor="@color/gray_500"
                 app:boxBackgroundMode="outline"
@@ -73,6 +75,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="213dp"
                     android:layout_height="match_parent"
+                    android:height="48dp"
                     android:outlineProvider="none" />
 
 
@@ -81,7 +84,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="77dp"
+            android:layout_height="55dp"
             android:layout_marginTop="26dp"
             android:orientation="horizontal">
 
@@ -92,13 +95,15 @@
                 android:layout_marginStart="36dp"
                 android:layout_weight="1"
                 android:text="@string/ingrese_contrasena"
-                android:textColor="@android:color/white" />
+                android:textColor="@color/white"
+                app:endIconTint="@color/white" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/contrasena"
                 android:layout_width="229dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/contrasena"
+                android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 app:boxBackgroundColor="@color/gray_500"
                 app:boxBackgroundMode="outline"
@@ -108,12 +113,12 @@
                 app:boxCornerRadiusTopStart="4dp"
                 app:boxStrokeColor="@color/white"
                 app:boxStrokeWidth="4dp"
-                app:endIconMode="password_toggle"
-                app:endIconTint="@color/white">
+                app:endIconMode="password_toggle">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="212dp"
                     android:layout_height="match_parent"
+                    android:height="48dp"
                     android:inputType="textPassword" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -127,6 +132,7 @@
             android:layout_marginTop="26dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="50dp"
+            android:onClick="onLoginButtonClick"
             android:text="@string/login"
             android:textColor="@color/black"
             app:backgroundTint="@color/teal_100"

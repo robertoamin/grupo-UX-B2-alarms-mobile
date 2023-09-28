@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listadoFragment">
+
+    <fragment
+        android:id="@+id/listadoFragment"
+        android:name="com.example.share_alarms.ListadoFragment"
+        android:label="Listado"
+        tools:layout="@layout/fragment_listado" >
+        <action
+            android:id="@+id/action_listadoFragment_to_crearFragment"
+            app:destination="@id/crearFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/crearFragment"
+        android:name="com.example.share_alarms.PickerFragment"
+        android:label="Crear"
+        tools:layout="@layout/fragment_picker" >
+        <action
+            android:id="@+id/action_crearFragment_to_listadoFragment"
+            app:destination="@id/listadoFragment" />
+    </fragment>
+
+
+</navigation>
