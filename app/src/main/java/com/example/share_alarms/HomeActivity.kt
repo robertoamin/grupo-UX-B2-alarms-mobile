@@ -28,9 +28,12 @@ class HomeActivity : AppCompatActivity() {
                     loadFragment(ListadoFragment())
                     true
                 }
-                R.id.navigation_contactos, R.id.navigation_notifications -> {
-                    Toast.makeText(this, "Accion seleccionada: ${item.title}", Toast.LENGTH_SHORT)
-                        .show()
+                R.id.navigation_contactos -> {
+                    loadFragment(ContactoFragment())
+                    true
+                }
+                R.id.navigation_notifications -> {
+                    loadFragment(NotificacionFragment())
                     true
                 }
                 else -> false

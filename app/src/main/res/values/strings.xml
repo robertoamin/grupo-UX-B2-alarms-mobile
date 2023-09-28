@@ -29,5 +29,11 @@
     <string name="microfono">Microfono</string>
     <string name="crear">Crear</string>
     <string name="cancelar">Cancelar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Andres String's -->
+    <string name="eventoAlarma">7:00 AM Colegio niños</string>
+    <string name="contactos_disponibles">Contactos disponibles</string>
+    <string name="asignar">Asignar</string>
 
 </resources>
