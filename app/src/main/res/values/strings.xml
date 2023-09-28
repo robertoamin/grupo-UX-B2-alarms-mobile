@@ -35,5 +35,6 @@
     <string name="eventoAlarma">7:00 AM Colegio niños</string>
     <string name="contactos_disponibles">Contactos disponibles</string>
     <string name="asignar">Asignar</string>
+    <string name="borrar">Eliminar</string>
 
 </resources>

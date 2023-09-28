@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ListView
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 
 
 class NotificacionFragment : Fragment() {
@@ -28,9 +31,34 @@ class NotificacionFragment : Fragment() {
         // Adaptador personalizado para la lista
         val adapter = NotificationListAdapter(requireContext(), data)
         listView.adapter = adapter
+
+        // Obtener referencias a los botones
+        val cancelNotificacionButton = view.findViewById<Button>(R.id.cancelarNotificaciones)
+        val eliminarButton = view.findViewById<Button>(R.id.borrarNotificaciones)
+
+        // Configurar el clic del botón "Cancelar" para navegar de vuelta a fragment_listado
+        cancelNotificacionButton.setOnClickListener {
+            findNavController().navigate(R.id.nav_host_fragment)
+
+        }
+        // Configurar el clic del botón "Eliminar"
+        eliminarButton.setOnClickListener {
+            val data = arrayListOf(
+                NotificationData(""),
+                NotificationData(""),
+                NotificationData(""),
+                NotificationData("")
+            )
+            val adapter = NotificationListAdapter(requireContext(), data)
+            listView.adapter = adapter
+
+            Toast.makeText(requireContext(), "Las notificaciones han sido eliminadas", Toast.LENGTH_SHORT).show()
+        }
+
         // Inflate the layout for this fragment
         return view
     }
+
 
 
 }

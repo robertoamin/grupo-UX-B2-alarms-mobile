@@ -34,8 +34,8 @@ class PickerFragment : Fragment() {
 
         // Configurar el clic del botón "Cancelar" para navegar de vuelta a fragment_listado
         cancelButton.setOnClickListener {
-            val navController = findNavController(R.id.nav_host_fragment)
-            navController.navigate(R.id.fragment_listado)
+            findNavController().navigate(R.id.nav_host_fragment)
+
         }
 
         // Configurar el clic del botón "Crear" para mostrar un mensaje Toast

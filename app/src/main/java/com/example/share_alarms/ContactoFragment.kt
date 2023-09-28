@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ListView
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 
 
 class ContactoFragment : Fragment() {
@@ -28,6 +31,19 @@ class ContactoFragment : Fragment() {
         // Adaptador personalizado para la lista
         val adapter = ContactListAdapter(requireContext(), data)
         listView.adapter = adapter
+
+        // Obtener referencias a los botones
+        val cancelContactoButton = view.findViewById<Button>(R.id.cancelarContacto)
+        val asignarButton = view.findViewById<Button>(R.id.asignarContacto)
+
+        // Configurar el clic del botón "Cancelar" para navegar de vuelta a fragment_listado
+        cancelContactoButton.setOnClickListener {
+            findNavController().navigate(R.id.nav_host_fragment)
+        }
+        // Configurar el clic del botón "Asignar" para mostrar un mensaje Toast
+        asignarButton.setOnClickListener {
+            Toast.makeText(requireContext(), "El(los) contacto(s) fueron asignados con exito", Toast.LENGTH_SHORT).show()
+        }
         // Inflate the layout for this fragment
         return view
     }
